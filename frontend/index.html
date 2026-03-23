@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Home Energy Monitor</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>⚡ Smart Energy</h2>
+
+    <button onclick="showSection('dashboard')">🏠 Dashboard</button>
+    <button onclick="showSection('devices')">🔌 Devices</button>
+    <button onclick="showSection('analytics')">📊 Analytics</button>
+    <button onclick="showSection('alerts')">⚠ Alerts</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HAMBURGER -->
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- HERO -->
+    <div class="hero" id="hero">
+      <div class="cursor-glow"></div>
+
+      <h1>Smart Home Energy Monitor</h1>
+      <p>Track • Optimize • Save Energy Efficiently</p>
+    </div>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section active">
+      <div class="cards">
+        <div class="card"><h3>Total Energy</h3><p id="totalEnergy">0</p></div>
+        <div class="card"><h3>Power</h3><p id="currentPower">0</p></div>
+        <div class="card"><h3>Bill</h3><p id="bill">₹0</p></div>
+      </div>
+
+<button onclick="getPrediction()">🤖 AI Prediction</button>
+      <div id="aiBox"></div>
+    </section>
+
+    <!-- ANALYTICS -->
+   <section id="analytics" class="section">
+
+  <h2>📊 Analytics</h2>
+
+  <!-- TOP STATS -->
+  <div class="cards">
+    <div class="card"><h3>Highest</h3><p id="highest"></p></div>
+    <div class="card"><h3>Average</h3><p id="average"></p></div>
+    <div class="card"><h3>Devices</h3><p id="count"></p></div>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="analytics-grid">
+
+    <div class="chart-container">
+      <h3>Hourly Energy Trend</h3>
+      <canvas id="hourlyChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h3>Room-wise Comparison</h3>
+      <canvas id="roomChart"></canvas>
+    </div>
+
+  </div>
+
+  <!-- ROOM CARDS -->
+  <div id="roomCards" class="room-grid"></div>
+
+</section>
+
+    <!-- DEVICES -->
+    <section id="devices" class="section">
+
+  <h2>⚡ Add Appliance</h2>
+
+  <div class="device-form">
+    <input id="name" placeholder="Appliance name">
+    <input id="room" placeholder="Room name">
+    <input id="power" placeholder="Power (W)">
+
+    <button onclick="addDevice()">Add Device</button>
+  </div>
+
+  <h2>📊 Appliance Monitoring</h2>
+
+  <table class="device-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Room</th>
+        <th>Power</th>
+        <th>Status</th>
+        <th>Health</th>
+        <th>Usage</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="deviceTable"></tbody>
+  </table>
+
+</section>
+
+    <!-- ALERTS -->
+    <section id="alerts" class="section">
+  <h2>⚠ Alerts</h2>
+
+  <button onclick="sendAlert()">Trigger Alert</button>
+
+  <!-- ALERT DISPLAY BOX -->
+  <div id="alertBox" class="alert-box"></div>
+</section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+<script src="charts.js"></script>
+</body>
+</html>

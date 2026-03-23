@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Air Conditioner",
+    "power": 1500,
+    "status": "ON",
+    "room": "Living Room"
+  },
+  {
+    "id": 2,
+    "name": "Ceiling Fan",
+    "power": 70,
+    "status": "ON",
+    "room": "Bedroom"
+  },
+  {
+    "id": 3,
+    "name": "Refrigerator",
+    "power": 200,
+    "status": "ON",
+    "room": "Kitchen"
+  },
+  {
+    "id": 4,
+    "name": "Washing Machine",
+    "power": 500,
+    "status": "OFF",
+    "room": "Utility"
+  },
+  {
+    "id": 5,
+    "name": "LED TV",
+    "power": 120,
+    "status": "ON",
+    "room": "Living Room"
+  },
+  {
+    "id": 6,
+    "name": "Laptop Charger",
+    "power": 65,
+    "status": "ON",
+    "room": "Study Room"
+  }
+]
