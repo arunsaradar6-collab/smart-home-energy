@@ -55,3 +55,23 @@ A modern web-based system to monitor, analyze, and optimize household energy con
 ---
 
 ## 📁 Project Structure
+
+│
+├── backend/
+│ ├── routes/
+│ │ └── energy.js
+│ ├── services/
+│ │ ├── aiService.js
+│ │ ├── emailService.js
+│ ├── data/
+│ │ └── devices.json
+│ ├── server.js
+│ └── package.json
+│
+├── frontend/
+│ ├── index.html
+│ ├── styles.css
+│ ├── script.js
+│ └── charts.js
+│
+└── README.md
